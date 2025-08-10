@@ -120,4 +120,8 @@
     body {
         @apply bg-background text-foreground;
     }
+
+    .heading-wrapper {
+        @apply flex flex-col items-center justify-center border-t border-b;
+    }
 }

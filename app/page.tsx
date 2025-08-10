@@ -1,9 +1,13 @@
-import NavHeader from '@/components/molecules/NavHeader';
+import HeroDisplayPic from '@/components/molecules/HeroDisplayPic';
+import AboutSection from '@/components/organisms/AboutSection';
+import HeroGreetingSection from '@/components/organisms/HeroGreetingSection';
 
 export default function Home() {
     return (
         <>
-            <NavHeader />
+            <HeroDisplayPic />
+            <HeroGreetingSection />
+            <AboutSection />
         </>
     );
 }

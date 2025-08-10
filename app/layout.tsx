@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Caveat } from 'next/font/google';
 import './globals.css';
 
+import NavHeader from '@/components/molecules/NavHeader';
+
 const geistSans = Geist({
     variable: '--font-geist-sans',
     subsets: ['latin'],
@@ -32,7 +34,13 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} antialiased`}
             >
-                {children}
+                <NavHeader />
+                <main className="min-h-screen mx-10 border-l border-r">{children}</main>
+                <section className="border-t border-b p-10">
+                    <p className="w-50">
+                        I am Hashim - a front-end developer. Thanks for checking out my site!
+                    </p>
+                </section>
             </body>
         </html>
     );
