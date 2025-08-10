@@ -122,6 +122,6 @@
     }
 
     .heading-wrapper {
-        @apply flex flex-col items-center justify-center border-t border-b;
+        @apply flex flex-col items-center justify-center border-t border-b px-10 md:px-0;
     }
 }

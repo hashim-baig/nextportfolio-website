@@ -50,14 +50,14 @@ const ExperienceSectionTemplate = () => {
                     <p>Experience</p>
                 </div>
 
-                <div className="heading-wrapper">
+                <div className="heading-wrapper text-center">
                     <p>
                         Highlights from my journey building and improving real-world applications.
                     </p>
                 </div>
             </section>
 
-            <section className="flex flex-col gap-20 md:px-20 mt-20 pb-20 heading-wrapper">
+            <section className="flex flex-col gap-10 md:px-20 mt-10 mb-10 heading-wrapper">
                 {experienceData.map((item, index) => (
                     <div key={index} className="flex justify-between">
                         <div className="hidden md:block">

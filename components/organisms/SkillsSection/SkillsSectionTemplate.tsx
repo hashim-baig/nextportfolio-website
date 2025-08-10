@@ -11,7 +11,7 @@ const SkillsSectionTemplate = () => {
                     <p>Skills</p>
                 </div>
 
-                <div className="heading-wrapper">
+                <div className="heading-wrapper text-center">
                     <p>A snapshot of the tools and technologies I use to bring ideas to life.</p>
                 </div>
             </section>

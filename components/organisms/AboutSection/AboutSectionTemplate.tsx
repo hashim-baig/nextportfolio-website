@@ -36,12 +36,12 @@ const AboutSectionTemplate = () => {
                     <p>About</p>
                 </div>
 
-                <div className="heading-wrapper">
+                <div className="heading-wrapper text-center">
                     <p>Here’s a quick look at who I am and what I enjoy doing.</p>
                 </div>
             </section>
 
-            <section className="flex flex-col gap-20 py-20">
+            <section className="flex flex-col gap-20 py-10 md:py-20 px-10 md:px-0">
                 {AboutPhaseData.map((item, index) => (
                     <AboutPhase
                         key={index}

@@ -16,7 +16,7 @@ const AboutPhaseTemplate = ({
 }: AboutPhaseTemplateProps) => {
     return (
         <div
-            className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} justify-around`}
+            className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} md:justify-around items-center gap-10`}
         >
             <div className="relative w-[200px] h-[250px]">
                 <Image src={imageSrc} alt={title} fill className="object-cover" />
