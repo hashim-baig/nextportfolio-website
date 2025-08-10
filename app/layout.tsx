@@ -35,7 +35,7 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} antialiased`}
             >
                 <NavHeader />
-                <main className="min-h-screen mx-10 border-l border-r">{children}</main>
+                <main className="min-h-screen mx-10 md:border-l md:border-r">{children}</main>
                 <section className="border-t border-b p-10">
                     <p className="w-50">
                         I am Hashim - a front-end developer. Thanks for checking out my site!
