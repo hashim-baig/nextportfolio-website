@@ -129,6 +129,10 @@
         font-family: var(--font-zodiak), sans-serif;
     }
 
+    .bg-checkered {
+        @apply bg-[linear-gradient(45deg,var(--color-border)_12.5%,transparent_12.5%,transparent_50%,var(--color-border)_50%,var(--color-border)_62.5%,transparent_62.5%,transparent_100%)] bg-[length:5px_5px] hidden w-full  border-border opacity-75 lg:block;
+    }
+
     .background-gradient {
         @apply bg-gradient-to-b from-[#414345] to-[#232526];
     }

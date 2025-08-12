@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Caveat } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
+import BgGradient from '@/components/atoms/BgGradient';
 
 import NavHeader from '@/components/molecules/NavHeader';
 
@@ -30,8 +31,13 @@ export default function RootLayout({
         <html lang="en">
             <body className={`${zodiak.variable} ${caveat.variable} antialiased `}>
                 <NavHeader />
-                <main className="min-h-screen pb-10 md:mx-10 md:border-l md:border-r">
-                    {children}
+                <main className="grid flex-1 grid-cols-1 lg:grid-cols-[32px_1fr_32px]">
+                    <div className="border-r bg-checkered"></div>
+                    <div className="relative col-span-1">
+                        <BgGradient />
+                        {children}
+                    </div>
+                    <div className="border-l bg-checkered"></div>
                 </main>
                 <section className="border-t border-b p-10">
                     <p className="w-50">

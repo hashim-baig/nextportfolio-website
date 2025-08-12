@@ -50,7 +50,7 @@ const AboutSectionTemplate = () => {
                         imageSrc={item.phaseImage}
                         title={item.title}
                         description={item.description}
-                        reverse={index % 2 === 0}
+                        reverse={index % 2 !== 0}
                     />
                 ))}
             </section>
