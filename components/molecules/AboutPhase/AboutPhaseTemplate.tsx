@@ -22,8 +22,8 @@ const AboutPhaseTemplate = ({
                 <Image src={imageSrc} alt={title} fill className="object-cover" />
             </div>
             <div className="flex flex-col gap-2 md:w-[50%]">
-                <p className="font-semibold">{title}</p>
-                <p>{description}</p>
+                <p className="about-phase-title">{title}</p>
+                <p className="about-phase-description">{description}</p>
             </div>
         </div>
     );

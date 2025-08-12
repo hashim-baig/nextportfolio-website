@@ -47,11 +47,11 @@ const ExperienceSectionTemplate = () => {
         <>
             <section className="flex flex-col gap-5 pt-5">
                 <div className="heading-wrapper">
-                    <p>Experience</p>
+                    <p className="heading-title">Experience</p>
                 </div>
 
                 <div className="heading-wrapper text-center">
-                    <p>
+                    <p className="heading-subtitle">
                         Highlights from my journey building and improving real-world applications.
                     </p>
                 </div>
@@ -61,16 +61,22 @@ const ExperienceSectionTemplate = () => {
                 {experienceData.map((item, index) => (
                     <div key={index} className="flex justify-between">
                         <div className="hidden md:block">
-                            <p>{item.organization}</p>
-                            <p>{item.duration}</p>
+                            <p className="experience-title">{item.organization}</p>
+                            <p className="text-gray-600">{item.duration}</p>
                         </div>
                         <div className="md:w-[50%]">
-                            {item.role.map((role, index) => (
-                                <div key={index} className="p-1">
-                                    <p className="pb-2">{role.title}</p>
+                            {item.role.map((role, roleIndex) => (
+                                <div key={roleIndex} className="p-1">
+                                    <p
+                                        className={`${roleIndex !== 0 ? 'pt-5' : ''} pb-2 experience-title`}
+                                    >
+                                        {role.title}
+                                    </p>
                                     <ul className="list-none flex flex-col gap-2">
                                         {role.summary.map((sum, index) => (
-                                            <li key={index}>{sum}</li>
+                                            <li key={index} className="text-gray-600 ">
+                                                {sum}
+                                            </li>
                                         ))}
                                     </ul>
                                 </div>

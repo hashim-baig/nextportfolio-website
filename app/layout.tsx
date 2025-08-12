@@ -1,17 +1,14 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Caveat } from 'next/font/google';
+import { Caveat } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 
 import NavHeader from '@/components/molecules/NavHeader';
 
-const geistSans = Geist({
-    variable: '--font-geist-sans',
-    subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
-    subsets: ['latin'],
+const zodiak = localFont({
+    src: '../public/fonts/Zodiak-Variable.woff2',
+    variable: '--font-zodiak',
+    display: 'swap',
 });
 
 const caveat = Caveat({
@@ -31,9 +28,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} ${caveat.variable} antialiased`}
-            >
+            <body className={`${zodiak.variable} ${caveat.variable} antialiased `}>
                 <NavHeader />
                 <main className="min-h-screen pb-10 md:mx-10 md:border-l md:border-r">
                     {children}

@@ -8,11 +8,13 @@ const SkillsSectionTemplate = () => {
         <>
             <section className="flex flex-col gap-5 py-5">
                 <div className="heading-wrapper">
-                    <p>Skills</p>
+                    <p className="heading-title">Skills</p>
                 </div>
 
                 <div className="heading-wrapper text-center">
-                    <p>A snapshot of the tools and technologies I use to bring ideas to life.</p>
+                    <p className="heading-subtitle">
+                        A snapshot of the tools and technologies I use to bring ideas to life.
+                    </p>
                 </div>
             </section>
 

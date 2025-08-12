@@ -33,11 +33,13 @@ const AboutSectionTemplate = () => {
         <>
             <section className="flex flex-col gap-5 py-5">
                 <div className="heading-wrapper">
-                    <p>About</p>
+                    <p className="heading-title">About</p>
                 </div>
 
                 <div className="heading-wrapper text-center">
-                    <p>Here’s a quick look at who I am and what I enjoy doing.</p>
+                    <p className="heading-subtitle">
+                        Here’s a quick look at who I am and what I enjoy doing.
+                    </p>
                 </div>
             </section>
 
