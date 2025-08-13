@@ -3,8 +3,10 @@ import { Caveat } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 import BgGradient from '@/components/atoms/BgGradient';
+import SocialMenu from '@/components/molecules/SocialMenu';
 
 import NavHeader from '@/components/molecules/NavHeader';
+import React from 'react';
 
 const zodiak = localFont({
     src: '../public/fonts/Zodiak-Variable.woff2',
@@ -39,10 +41,16 @@ export default function RootLayout({
                     </div>
                     <div className="border-l bg-checkered"></div>
                 </main>
-                <section className="border-t border-b p-10">
-                    <p className="w-50">
+                <section className="border-t border-b p-10 pb-4 flex flex-col gap-5">
+                    <p className="font-caveat text-xl font-bold">#im</p>
+
+                    <p className="leading-5 text-gray-500 max-w-xs">
                         I am Hashim - a front-end developer. Thanks for checking out my site!
                     </p>
+                    <div className="flex items-center gap-5">
+                        <p className="text-gray-500">© 2025 Hashim Baig</p>
+                        <SocialMenu />
+                    </div>
                 </section>
             </body>
         </html>

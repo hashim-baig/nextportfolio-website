@@ -2,19 +2,18 @@ import React from 'react';
 
 const HeroGreetingSectionTemplate = () => {
     return (
-        <section>
-            <div className="heading-wrapper">
-                <div>
-                    <p>Hi, I’m Hashim 👋</p>
+        <section className="flex flex-col gap-5 py-5">
+            <div className="heading-wrapper text-6xl leading-16 tracking-tighter font-medium text-center">
+                <p className="max-w-lg">Hey, I’m Hashim! </p>
+                <p className="max-w-xl">Welcome to my little space on the web!</p>
+            </div>
 
-                    <p>
-                        Frontend Engineer who loves crafting fast, accessible, and secure web apps.
-                    </p>
-
-                    <p>3+ years of experience with React.js, Next.js, and performance tuning.</p>
-
-                    <p>Turning complex ideas into simple, beautiful, and scalable web apps.</p>
-                </div>
+            <div className="heading-wrapper leading-8 text-center">
+                <p className="max-w-3xl mx-auto">
+                    I’m a frontend engineer who loves building fast, accessible, and secure
+                    applications. This site is my personal playground where I try new ideas, work on
+                    fun projects, and share what I learn along the way.
+                </p>
             </div>
         </section>
     );
