@@ -152,7 +152,7 @@
     }
 
     .about-phase-description {
-        @apply text-gray-600 leading-8 text-base;
+        @apply text-gray-600 leading-8 text-base max-w-xl;
     }
 
     .experience-title {

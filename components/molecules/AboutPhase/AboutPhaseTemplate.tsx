@@ -28,7 +28,7 @@ const AboutPhaseTemplate = ({
                     className={`absolute left-0 top-0 ${reverse ? 'rotate-[8deg]' : 'rotate-[-8deg]'} rounded-lg object-cover shadow`}
                 />
             </div>
-            <div className="flex flex-col gap-2 md:w-[50%]">
+            <div className="flex flex-col gap-2 max-w-md">
                 <p className="about-phase-title">{title}</p>
                 <p className="about-phase-description">{description}</p>
             </div>

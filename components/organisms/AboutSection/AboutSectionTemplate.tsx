@@ -69,7 +69,7 @@ const AboutSectionTemplate = () => {
             </section>
 
             <section className="flex flex-col gap-20 py-10 md:py-20 px-10 md:px-0 relative">
-                <div className="absolute left-0 top-0 max-w-full" style={{ left: leftPos }}>
+                <div className="absolute left-0 top-0 max-w-fit z-[-1]" style={{ left: leftPos }}>
                     <AboutTrackPattern />
                 </div>
 
