@@ -1,5 +1,7 @@
-import React from 'react';
+'use client';
+import React, { useLayoutEffect, useState } from 'react';
 import AboutPhase from '@/components/molecules/AboutPhase';
+import AboutTrackPattern from '@/components/molecules/AboutTrackPattern';
 
 const AboutPhaseData = [
     {
@@ -29,6 +31,29 @@ const AboutPhaseData = [
 ];
 
 const AboutSectionTemplate = () => {
+    const [leftPos, setLeftPos] = useState(0);
+
+    useLayoutEffect(() => {
+        function updateLeft() {
+            const width = window.innerWidth;
+            if (width >= 1280) {
+                // xl breakpoint
+                setLeftPos(width - width * 0.65); // 30% from right
+            } else if (width >= 1024) {
+                // lg breakpoint
+                setLeftPos(width - width * 0.65);
+            } else if (width >= 768) {
+                // md breakpoint
+                setLeftPos(width - width * 0.65);
+            } else {
+                setLeftPos(0); // left:0 for small screens
+            }
+        }
+        updateLeft();
+        window.addEventListener('resize', updateLeft);
+        return () => window.removeEventListener('resize', updateLeft);
+    }, []);
+
     return (
         <>
             <section className="flex flex-col gap-5 py-5">
@@ -43,7 +68,11 @@ const AboutSectionTemplate = () => {
                 </div>
             </section>
 
-            <section className="flex flex-col gap-20 py-10 md:py-20 px-10 md:px-0">
+            <section className="flex flex-col gap-20 py-10 md:py-20 px-10 md:px-0 relative">
+                <div className="absolute left-0 top-0 max-w-full" style={{ left: leftPos }}>
+                    <AboutTrackPattern />
+                </div>
+
                 {AboutPhaseData.map((item, index) => (
                     <AboutPhase
                         key={index}
