@@ -58,8 +58,8 @@ const ExperienceSectionTemplate = () => {
                 </div>
             </section>
 
-            <div className="relative overflow-clip md:px-20 mt-10 mb-10">
-                <div className="flex flex-col gap-10  heading-wrapper">
+            <div className="relative overflow-hidden md:px-20 mt-10 mb-10  flex flex-col md:items-center md:justify-center border-t border-b">
+                <div className="flex flex-col gap-10 px-10">
                     {experienceData.map((item, index) => (
                         <div key={index} className="flex justify-between">
                             <div className="hidden md:block">
