@@ -1,4 +1,5 @@
 import React from 'react';
+import ExperienceTimeline from '@/components/molecules/ExperienceTimeline';
 
 const experienceData = [
     {
@@ -47,38 +48,50 @@ const ExperienceSectionTemplate = () => {
         <>
             <section className="flex flex-col gap-5 pt-5">
                 <div className="heading-wrapper">
-                    <p>Experience</p>
+                    <p className="heading-title">Experience</p>
                 </div>
 
                 <div className="heading-wrapper text-center">
-                    <p>
+                    <p className="heading-subtitle">
                         Highlights from my journey building and improving real-world applications.
                     </p>
                 </div>
             </section>
 
-            <section className="flex flex-col gap-10 md:px-20 mt-10 mb-10 heading-wrapper">
-                {experienceData.map((item, index) => (
-                    <div key={index} className="flex justify-between">
-                        <div className="hidden md:block">
-                            <p>{item.organization}</p>
-                            <p>{item.duration}</p>
+            <div className="relative overflow-clip md:px-20 mt-10 mb-10">
+                <div className="flex flex-col gap-10  heading-wrapper">
+                    {experienceData.map((item, index) => (
+                        <div key={index} className="flex justify-between">
+                            <div className="hidden md:block">
+                                <p className="experience-title">{item.organization}</p>
+                                <p className="text-gray-600">{item.duration}</p>
+                            </div>
+                            <div className="md:w-[50%] mx-2">
+                                {item.role.map((role, roleIndex) => (
+                                    <div key={roleIndex} className="p-1">
+                                        <p
+                                            className={`${roleIndex !== 0 ? 'pt-5' : ''} pb-2 experience-title`}
+                                        >
+                                            {role.title}
+                                        </p>
+                                        <ul className="list-none flex flex-col gap-2">
+                                            {role.summary.map((sum, index) => (
+                                                <li key={index} className="text-gray-600 ">
+                                                    {sum}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
-                        <div className="md:w-[50%]">
-                            {item.role.map((role, index) => (
-                                <div key={index} className="p-1">
-                                    <p className="pb-2">{role.title}</p>
-                                    <ul className="list-none flex flex-col gap-2">
-                                        {role.summary.map((sum, index) => (
-                                            <li key={index}>{sum}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                ))}
-            </section>
+                    ))}
+                </div>
+
+                <div className="absolute top-0 h-full w-8 md:left-[calc(28%_-_1rem)] mx-2">
+                    <ExperienceTimeline />
+                </div>
+            </div>
         </>
     );
 };
