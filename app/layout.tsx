@@ -47,10 +47,12 @@ export default function RootLayout({
                     <p className="leading-5 text-gray-500 max-w-xs">
                         I am Hashim - a front-end developer. Thanks for checking out my site!
                     </p>
-                    <div className="flex items-center gap-5">
-                        <p className="text-gray-500">© 2025 Hashim Baig</p>
+
+                    <div className="max-w-fit">
                         <SocialMenu />
                     </div>
+
+                    <p className="text-gray-500">© 2025 Hashim Baig</p>
                 </section>
             </body>
         </html>

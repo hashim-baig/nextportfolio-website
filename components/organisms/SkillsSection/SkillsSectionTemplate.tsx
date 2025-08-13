@@ -1,7 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
 
-const brandIcons = ['react', 'nextdotjs', 'tailwindcss', 'shadcnui', 'jest', 'javascript'];
+const brandIcons = [
+    'nextdotjs',
+    'react',
+    'javascript',
+    'html5',
+    'css',
+    'tailwindcss',
+    'shadcnui',
+    'jest',
+    // 'cypress',
+    'git',
+    'github',
+    'intellijidea',
+    // 'googlechrome',
+    'lighthouse',
+];
 
 const SkillsSectionTemplate = () => {
     return (
@@ -18,15 +33,12 @@ const SkillsSectionTemplate = () => {
                 </div>
             </section>
 
-            <div className="grid gap-10 grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 mx-auto justify-items-center py-20">
+            <div className="grid gap-10 grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 mx-auto justify-items-center py-20 px-10">
                 {brandIcons.map((icon) => (
-                    <Image
-                        key={icon}
-                        src={`/brand-icons/${icon}.svg`}
-                        alt={icon}
-                        width={50}
-                        height={50}
-                    />
+                    <div key={icon} className="flex flex-col gap-2 items-center justify-center">
+                        <Image src={`/brand-icons/${icon}.svg`} alt={icon} width={50} height={50} />
+                        <p className="text-md text-secondary">{icon}</p>
+                    </div>
                 ))}
             </div>
         </>
